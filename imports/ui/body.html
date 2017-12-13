@@ -1,0 +1,20 @@
+<!--HTML files in Meteor define templates-->
+
+<body>
+  <div class="container">
+    <header>
+      <h1> Todo List </h1>
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+    </header>
+
+    <ul>
+      {{#each tasks}} <!-- These let you add logic and data to your views. Iterates (Repeats) the array (list~) and insert a task template for each value-->
+        {{> task}} <!-- References to templates {{> templateName}} -->
+        <!-- Inside this block we can display the text property of each array item using {{text}}-->
+      {{/each}}
+    </ul>
+  </div>
+</body>
